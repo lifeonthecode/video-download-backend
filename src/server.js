@@ -23,6 +23,7 @@ app.use(cors({
 // Parse JSON
 app.use(express.json());
 
+app.get("/", (req, res) => res.json({ status: "ok" }));
 
 // Routes
 app.use("/api/info", infoRoutes);
